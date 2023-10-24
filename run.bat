@@ -1,1 +1,1 @@
-docker run -v %CD%\shared:/shared -p 19997:19997 -it coppeliasim-ubuntu18 %*
+docker run -it --rm --net=host -v D:\Lavoro\docker_coppelia\docker-image-coppeliasim:/shared -e DISPLAY=host.docker.internal:0.0 -e LIBGL_ALWAYS_INDIRECT=0 -p 19997:19997 -it coppeliasim-ubuntu20 %*
